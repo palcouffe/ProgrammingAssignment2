@@ -106,7 +106,7 @@ cacheSolve <- function(x, ...) {
         MatrixToInvert <- x$get()
         
         ## Do compute the inverse matrix using solve
-        ResultInvMatrix <- solve(MatrixToInvert,MatrixToInvert, ...)
+        ResultInvMatrix <- solve(MatrixToInvert, ...)
         
         ## Cache the result in the "cache matrix" using its set function
         x$setInvMatrix(ResultInvMatrix)
@@ -126,12 +126,12 @@ cacheSolve <- function(x, ...) {
 ## NULL
 ## > cacheSolve(my_cache_matrix)
 ##      [,1] [,2]
-## [1,]    1    0
-## [2,]    0    1
+## [1,]   -2  1.5
+## [2,]    1 -0.5
 ## > cacheSolve(my_cache_matrix)
 ## getting cached data
 ##      [,1] [,2]
-## [1,]    1    0
-## [2,]    0    1
+## [1,]   -2  1.5
+## [2,]    1 -0.5
 ## > 
 ################################################################################
